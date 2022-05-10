@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ONLINE TODO LIST</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/utlities.css" />
+  </head>
+  <body>
+    <div class="container mt-10 mb-10 mt-sm-6 mb-sm-4 flex-center flex-wrap-sm">
+      <div class="main-img">
+        <div class="title text-center mb-sm-0">
+          <img src="./img/check.svg" />
+          <h1 class="fs-4">ONLINE TODO LIST</h1>
+        </div>
+        <img src="./img/img.png" />
+      </div>
+      <div class="input-form login-form ml-sm-0">
+        <form action="">
+          <h2 class="form-title mb-3 mb-sm-4 fw-7 fs-3 fs-sm-125">最實用的線上待辦事項服務</h2>
+          <label for="login-email">
+            Email
+          </label>
+          <input type="email" class="mb-2" id="login-email" placeholder="請輸入Email" />
+          <p class="warning fw-7 mb-2 d-none" id="login-email-empty">此欄位不可為空</p>
+          <label for="login-password">
+            密碼
+          </label>
+          <input
+            type="password"
+            class="mb-3 mb-sm-0"
+            id="login-password"
+            placeholder="請輸入密碼"
+          />
+          <p class="warning fw-7 mb-2 d-none" id="login-password-empty">此欄位不可為空</p>
+          <input type="button" class="login-btn mb-3 fw-7 fs-2" onClick="loginCheck()" value="登入" />
+          <a href="register.html" class="page-link fw-7">註冊帳號</a>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./js/all.js"></script>
+</html>

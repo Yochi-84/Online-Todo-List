@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ONLINE TODO LIST</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/todo.css" />
+    <link rel="stylesheet" href="./css/utlities.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="title text-center mb-sm-0">
+        <img src="./img/check.svg" />
+        <h1 class="fs-3">ONLINE TODO LIST</h1>
+      </div>
+      <div class="nav-btn-list mr-4 fs-0 d-flex">
+        <a href="#" class="user-todo fs-2 fw-7 fs-2">王小明的待辦</a>
+        <a href="index.html" class="logout-btn fs-2 ml-3 fs-2">登出</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="insert-bar d-flex mb-2">
+        <input type="text" placeholder="新增待辦事項" class="input-bar fs-2 vertical-middle" id="input" maxlength="15" onkeydown="enterCheck()">
+        <div class="insert-btn-bar vertical-middle">
+          <button class="insert-btn p-relative" onclick="addTodo()"></button>
+        </div>
+      </div>
+
+      <!-- 有資料 -->
+      <div class="todo-block w-100" id="todo-block">
+        <ul class="tabs flex-center">
+          <li class="tabs-item fw-7 text-center is-active">全部</li>
+          <li class="tabs-item fw-7 text-center">待完成</li>
+          <li class="tabs-item fw-7 text-center">已完成</li>
+        </ul>
+        <ul class="todo-list">
+          <!--  js 載入 -->
+        </ul>
+        <div class="todo-footer">
+          <div id="counter" class="counter flex-center"></div>
+          <div class="clear">
+            <button id="clear-btn" class="clear-btn fw-4" onclick="clearCompleted()">清除已完成項目</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 沒資料 -->
+      <div class="empty-block w-100 text-center d-none" id="empty-block">
+        <h4 class="fs-2">目前尚無待辦事項</h4>
+        <img src="./img/empty.png">
+      </div>
+    </div>
+  </body>
+  <script src="./js/todo.js"></script>
+</html>

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Zilla+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffd370;
+}
+
+.container {
+  max-width: 1028px;
+  margin: 0 auto;
+}
+
+.main-img {
+  width: 386px;
+  margin-left: 4px;
+}
+
+.title {
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.title img {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+  filter: brightness(0.1);
+  position: relative;
+  bottom: 4.5px;
+}
+
+.title h1 {
+  display: inline-block;
+  font-family: "Baloo Thambi 2", serif;
+  line-height: 49px;
+}
+
+.login-form {
+  margin-top: 33px;
+}
+
+.input-form {
+  font-family: "Noto Sans TC", serif;
+  width: 304px;
+  margin-left: 103px;
+}
+
+.input-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  line-height: 34.75px;
+}
+
+.input-form label {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.input-form input:not([type=button]) {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  line-height: 23px;
+}
+
+.input-form input:not([type=button]):focus {
+  outline: none;
+}
+
+.input-form ::placeholder {
+  font-family: "Noto Sans TC", serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.input-form input[type=button] {
+  padding: 12px 48px;
+  line-height: 23px;
+  align-self: center;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 128px;
+  margin-top: 27px;
+}
+
+.register-btn {
+  width: 160px;
+}
+
+.warning {
+  color: #d87355;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.page-link {
+  text-decoration: none;
+  align-self: center;
+  line-height: 23.17px;
+  color: #000;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    max-width: 375px;
+    min-height: 0;
+    margin: 0 auto;
+  }
+
+  .main-img {
+    padding: 0;
+    margin-bottom: 2px;
+  }
+
+  .main-img > img {
+    display: none;
+  }
+
+  .login-form {
+    margin-top: 6.59px;
+  }
+
+  .form-title {
+    align-self: center;
+  }
+}
