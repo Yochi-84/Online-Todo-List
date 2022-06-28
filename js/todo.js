@@ -137,8 +137,22 @@ function updateList() {
   getCounter()
 }
 
-// TODO: 全部清除，json-server 好像沒有提供一次 delete 多筆的做法，用 Promise.all 做?
 function clearCompleted() {
+  const dList = todo_list.filter(item => item.status === true && item.userID === id)
+  const dUrl = dList.map(item => `https://todo-json-00824.herokuapp.com/todo/${item.id}`)
+  Promise.all(dUrl.map(item => fetch(item,{
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    redirect: "follow"
+  })
+  .then(res => res.json())
+  .then(result => result)
+  .catch(err => console.log(err))
+  ))
+  .catch(err => console.log(err))
+
   todo_list = todo_list.filter(item => item.status === false)
   if (todo_list.length < 1) {
     toggleBlock()
